@@ -1,4 +1,3 @@
-import tkinter as tk
 import rumps
 import pygame
 import sys
@@ -35,11 +34,6 @@ def show_rest_screen():
         event = pygame.event.wait(int(rest_time*1e3))
         if event.type == pygame.NOEVENT:
             break
-        if event.type == pygame.QUIT:
-            break
-        elif event.type == pygame.KEYDOWN:
-            if event.key == pygame.K_ESCAPE:
-                break
         if event.type == pygame.MOUSEBUTTONDOWN:
             if event.button == 1:  # Left mouse button
                 if text_rect.collidepoint(event.pos):
